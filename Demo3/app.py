@@ -62,7 +62,7 @@ def result():
     serving =float(request.form.get("serving"))
 
     API_URL = "https://api.nal.usda.gov/fdc/v1/foods/search"
-    API_KEY = "CN1KSkobrGbszhyPOla55aEDrbFo9ezYnpcWy05E" 
+    API_KEY = "***********" 
     params = {"query": name, "pageSize": 1}
     headers = {"x-api-key": API_KEY}
 
@@ -148,7 +148,7 @@ def result():
         servings_dish5 = result.x[4]
 
         from openai import OpenAI
-        client = OpenAI(api_key='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') 
+        client = OpenAI(api_key='************') 
         # Formulate a query for OpenAI
         query = f"give me meal and snacks single servings with Maximum Servings of eggs: {servings_dish1:.2f} and Maximum Servings of vegetables : {servings_dish2:.2f} cups and Maximum Servings of chicken : {servings_dish3:.2f} cups and Maximum Servings of fruits : {servings_dish4:.2f} cups and Maximum Servings of rice : {servings_dish5:.2f} cups so i can meet my nutritional goals for today. It can be multiple dishes but only 1 serving per dish.I just need names of the dishes with no recipies."
 
